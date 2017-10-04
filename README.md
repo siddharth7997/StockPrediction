@@ -10,10 +10,14 @@ VaderSentiment=>https://github.com/cjhutto/vaderSentiment
 Using LSTM with 4 hidden layers and 
 optimisation technique "ADAMS"=>https://github.com/fchollet/keras/blob/master/keras/optimizers.py#L385
 
-Order Of execution:-
+##Order Of execution:-
+
 1.Parse.py=> provide proper company code and market name ex:MSFT,NASDAQ;INFY,NYSE;It generates a csv file with all news
+
 2.Test1.py=>combines all news for a particular day
+
 3.list.py=>calculates semantic score for each day
+
 4.StockPredictionUsingSemanticDataAndHistoricalLSTM.ipynb
 
 note:parse.py,list.py,test1.py are in folder semantic
