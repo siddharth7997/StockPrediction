@@ -18,7 +18,7 @@ optimisation technique "ADAMS"=>https://github.com/fchollet/keras/blob/master/ke
 
 3.list.py=>calculates semantic score for each day
 
-4.StockPredictionUsingSemanticDataAndHistoricalLSTM.ipynb
+4.predicttoday.py
 
 note:parse.py,list.py,test1.py are in folder semantic
 
