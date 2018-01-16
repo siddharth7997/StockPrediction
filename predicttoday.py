@@ -1,3 +1,8 @@
+#hello
+#if you get any problem while running it please mail me @ siddharth7997@gmail.com
+#Siddharth Panigrahi signing out.
+
+
 print "Stock Prediction using Lstm <Historical Data and Semantic Analysis on News>"
 
 import numpy as np
