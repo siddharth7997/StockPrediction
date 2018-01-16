@@ -31,7 +31,7 @@ def get_stock_data(stock_name,market_name,normalized=0):
     df_stocks= pd.DataFrame(stocks)
     
     sem_cols=['Date','Semantic']
-    semantic=pd.read_csv('/home/siddharth/Desktop/StockPrediction/semantic/semantic.csv',header=0,names=sem_cols)
+    semantic=pd.read_csv('semantic/semantic.csv',header=0,names=sem_cols)
     df_semantics=pd.DataFrame(semantic)
     df=pd.merge(semantic,stocks,how='inner',left_on=None, right_on=None)
     df=df[::-1]
@@ -98,8 +98,8 @@ def load_data(stock, seq_len):
 
 
 warnings.filterwarnings('ignore')
-stock_name = raw_input('Please enter company code ex:GOOGL,MSFT,AAPL,INFY')
-market_name= raw_input('Please enter market code ex:NASDAQ,NASDAQ,NASDAQ,NYSE')
+stock_name = raw_input('Please enter company code ex:GOOGL,MSFT,AAPL,INFY:')
+market_name= raw_input('Please enter market code ex:NASDAQ,NASDAQ,NASDAQ,NYSE:')
 df,df_date= get_stock_data(stock_name,market_name,0)
 #print "df---------------------------"
 #print df.tail()
@@ -126,7 +126,7 @@ X_train, y_train, X_test, y_test = load_data(df[::-1], window)
 #print("y_train", y_train.shape)
 #print("X_test", X_test.shape)
 #print("y_test", y_test.shape)
-
+print "\n\n-------------------------------------------------------------------------------------------------------------------"
 model = build_model2([4,window,1])
 
 model.fit(
@@ -136,6 +136,10 @@ model.fit(
     nb_epoch=500,
     validation_split=0.1,
     verbose=0)
+
+print "\n\n-------------------------------------------------------------------------------------------------------------------"
+print "Ignore Warnings :)"
+
 
 print "\n\n"
 trainScore = model.evaluate(X_train, y_train, verbose=0)
@@ -163,8 +167,11 @@ for g in ratio:
         ct=ct+1
 error=total/ct
 
-print "average error rate :",abs(error*100)
-print "\n\n"
-print "stock name",stock_name,"date",datetime.datetime.now()
-print"\n\n"
-print "Prediction for today close price:",(p[0][len(p[0])-1]*maxclose),"error margin:",error*100
+if not math.isnan(error):
+	print "average error rate :",abs(error*100)
+	print "\n\n"
+	print "stock name",stock_name,"date",datetime.datetime.now()
+	print"\n\n"
+	print "Prediction for today close price:",p[len(p)-1][0]*maxclose*(1+error)
+else:
+	print "Looks Like Model Din't Train properly! Rerun it!"
