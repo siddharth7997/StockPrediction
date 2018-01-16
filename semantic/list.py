@@ -1,3 +1,7 @@
+#this is a python3 program which was made by my friend.
+# to run it python3 list.py
+
+
 from datetime import date
 from datetime import timedelta
 
@@ -29,6 +33,8 @@ for i in range(lenlist-1):
 			l[j + 1] = m
 for i in range(lenlist):
 	print(l[i], d[i])
+
+
 curdate = d[0]
 lol1 = []
 lol2 = []
@@ -49,3 +55,7 @@ while(curdate <= d[lenlist - 1]):
 		fo.write(dtt[2] + '-' + month[int(dtt[1])] + '-' + dtt[0][2:] + ', '+str(sc / c))
 		fo.write('\n')
 	curdate = curdate + t
+
+
+
+

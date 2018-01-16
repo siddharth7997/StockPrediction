@@ -1,3 +1,10 @@
+# this is a python3 program which was made by my friend Vishal Anand Chenna.
+# to run it python3 test1.py
+
+
+
+
+
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 analyzer = SentimentIntensityAnalyzer()
