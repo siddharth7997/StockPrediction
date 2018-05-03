@@ -10,7 +10,7 @@ VaderSentiment=>https://github.com/cjhutto/vaderSentiment
 Using LSTM with 4 hidden layers and 
 optimisation technique "ADAMS"=>https://github.com/fchollet/keras/blob/master/keras/optimizers.py#L385
 
-##Order Of execution:-
+## Order Of execution:-
 
 1. Parse.py=> provide proper company code and market name ex:MSFT,NASDAQ;INFY,NYSE;It generates a csv file with all news
 
@@ -24,12 +24,15 @@ optimisation technique "ADAMS"=>https://github.com/fchollet/keras/blob/master/ke
 
 See results section to see the accuracy we have got for stocks of various companies various companys.
 
-##Dependencies
+## Dependencies
 
 1. keras
 2. tensorflow
-
-##References
+3. matplotlib
+4. pandas
+5. theanos
+6. urllib
+## References
 
 
 1. https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
