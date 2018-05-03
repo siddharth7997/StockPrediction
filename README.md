@@ -32,9 +32,19 @@ See results section to see the accuracy we have got for stocks of various compan
 4. pandas
 5. theanos
 6. urllib
+7. FeedParser
+
+## Methodology
+![Alt text]( 	Project_stock_prediction.jpg "Methodology")
+
+
+
+## Results
+![Alt text]( 	Tesla_11thOct2018.png "TESLA")
+![Alt text]( 	apple_10thOct2018.png "APPLE")
+![Alt text]( 	Infosys_11thOct2017.png "INFOSYS")
+
 ## References
-
-
 1. https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
 2. https://keras.io/
 
